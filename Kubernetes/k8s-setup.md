@@ -32,6 +32,11 @@
     sudo mv kops-linux-amd64 /usr/local/bin/kops
     ```
 1. Create a Route53 private hosted zone (you can create Public hosted zone if you have a domain)
+   ```sh
+    Route53->hosted zones->create hosted zone
+    Domain name:
+    Type:Private hosted zone for Amazon VPC
+   ```
 1. create an S3 bucket 
    ```sh
     aws s3 mb s3://dev.k8s.valaxy.in
