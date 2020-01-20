@@ -34,7 +34,7 @@
 1. Create a Route53 private hosted zone (you can create Public hosted zone if you have a domain)
    ```sh
     Route53->hosted zones->create hosted zone
-    Domain name:
+    Domain name:(e.g. valaxy.net)
     Type:Private hosted zone for Amazon VPC
    ```
 1. create an S3 bucket 
@@ -52,6 +52,7 @@
 1. Create kubernetes cluster definitions on S3 bucket 
    ```sh 
     kops create cluster --cloud=aws --zones=ap-southeast-1b --name=dev.k8s.valaxy.in --dns-zone=valaxy.in --dns private
+    modify configurations(follow the code suggestion after create command)
     ```
 1. Create kubernetes cluser
     ```sh 
